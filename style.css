@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: auto;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+
+.fortune-cookie, .fortune-message {
+  background: white;
+  padding: 4.8rem 6.4rem;
+  border-radius: .5rem;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 42.8rem;
+  height: 54.2rem;
+  position: relative;
+}
+
+.fortune-cookie {
+  padding-bottom: 6.4rem;
+}
+
+p {
+  margin-top: 1.8rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: auto;
+}
+
+.fortune-message p{
+  font-family:"Dancing Script", cursive;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: auto;
+  color: #000000;
+  text-align: center;
+  background-color: #E4EDF1;
+  padding: .1rem;
+  border: 1px solid #ccc;
+  box-shadow: .3rem .3rem .3rem rgba(0, 0, 0, 0.2);
+  width: 133%;
+  margin: 2.5rem -5rem;
+  animation: slideInFromBiscuit 1.5s ease-in-out forwards;
+}
+
+@keyframes slideInFromBiscuit {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  50% {
+      transform: translateY(-10%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+ 
+.fortune-cookie img {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  animation: openCookie 1s;
+}
+
+.fortune-message img {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  background-color: #ff9000;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: .4rem;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+button:hover {
+  background-color: #e07a00;
+}
+
+
+@keyframes shake {
+  0% { transform: rotate(-5deg); }
+  25% {transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% {transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+
+#closedCookie:hover {
+  animation: shake 0.2s ease forwards;
+}
+
+@keyframes openCookie {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes slideInFromBiscuit {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  50% {
+      transform: translateY(-10%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
